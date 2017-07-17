@@ -1,0 +1,14 @@
+[
+  {
+    "remote": "carbon",
+    "revision" : "cr-5.1",
+    "repository": "CarbonROM/android_kernel_nextbit_msm8992",
+    "target_path": "kernel/nextbit/msm8992"
+  },
+  {
+    "remote": "gh",
+    "revision": "cm-14.1",
+    "repository": "LineageOS/android_device_qcom_common",
+    "target_path": "device/qcom/common"
+  }
+]

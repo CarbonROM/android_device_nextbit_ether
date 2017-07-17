@@ -1,1 +1,2 @@
 allow netmgrd self:capability { dac_override };
+allow netmgrd diag_device:chr_file { read write };

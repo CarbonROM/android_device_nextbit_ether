@@ -1,2 +1,2 @@
 allow thermal-engine thermal_socket:sock_file { relabelfrom relabelto };
-
+allow thermal-engine diag_device:chr_file { read write };
