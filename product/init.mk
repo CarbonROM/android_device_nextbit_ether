@@ -11,4 +11,5 @@ PRODUCT_PACKAGES += \
     init.qcom.fs.rc \
     init.qcom.rc \
     init.qcom.sh \
+    init.qcom.post_boot.sh \
     init.target.rc
