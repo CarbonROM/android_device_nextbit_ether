@@ -292,6 +292,8 @@ on post-fs-data
     mkdir /data/data/media 0770 media media
 
     #Create PERFD deamon related dirs
+    mkdir /data/misc/perfd 0755 root system
+    chmod 2755 /data/misc/perfd
     mkdir /data/system/perfd 0770 root system
     chmod 2770 /data/system/perfd
     rm /data/system/perfd/default_values
@@ -326,6 +328,7 @@ service perfd /system/vendor/bin/perfd
    group system
    socket perfd seqpacket 0666 root system
    writepid /dev/cpuset/system-background/tasks
+   disabled
 
 service iop /system/bin/iop
     class main
@@ -345,7 +348,20 @@ on property:persist.sys.ssr.enable_ramdumps=0
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
 
 on property:sys.boot_completed=1
+    # Disable core control, enable msm_thermal
+    write /sys/module/msm_thermal/core_control/enabled 0
+    write /sys/module/msm_thermal/parameters/enabled 1
+    # if EAS is present, switch to sched governor (no effect if not EAS)
+    write /sys/devices/system/cpu/cpu4/online 1
+    write /sys/devices/system/cpu/cpu5/online 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "sched"
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "sched"
+
+    # Start perfd after all properties have been properly set
+    start perfd
+
     write /dev/kmsg "Boot completed "
+
 
 on property:persist.radio.atfwd.start=false
     stop atfwd
