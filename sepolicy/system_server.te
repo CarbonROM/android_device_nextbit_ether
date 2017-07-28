@@ -4,3 +4,13 @@ allow system_server rild:unix_dgram_socket sendto;
 # run on big cores for app launch (sched_boost) - instead of just
 # boosting them to make it "more likely" to run on big cores.
 allow system_server domain:process setsched;
+
+# talk to perfd
+allow system_server perfd_data_file:dir search;
+allow system_server perfd_data_file:sock_file write;
+allow system_server perfd:unix_stream_socket connectto;
+
+# Add policies for VoxPopuli power hal
+allow {system_file system_server} device:dir {rw_file_perms search};
+allow {system_file system_server} device:{dir file} {rw_file_perms};
+
