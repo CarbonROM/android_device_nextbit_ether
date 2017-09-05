@@ -311,7 +311,6 @@ on post-fs-data
 service qfintverify /sbin/qfintverify
     user root
     class core
-    seclabel u:r:qfips:s0
     oneshot
 
 service ssr_setup /system/bin/ssr_setup
@@ -693,7 +692,6 @@ service qti-testscripts /system/bin/sh /system/etc/init.qcom.testscripts.sh
     user root
     disabled
     oneshot
-    seclabel u:r:qti-testscripts:s0
 
 service wifi-sdio-on /system/bin/sh /system/etc/init.qcom.sdio.sh
     class late_start
