@@ -5,6 +5,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libtinyxml
 
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
    fs_config_files

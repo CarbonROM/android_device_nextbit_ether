@@ -17,6 +17,13 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessingdescriptors \
     libqcomvoiceprocessing
 
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.broadcastradio@1.0-impl \
+    android.hardware.radio.deprecated-V1.0-java \
+    android.hardware.soundtrigger@2.0-impl
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/listen_platform_info.xml:system/etc/listen_platform_info.xml \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
