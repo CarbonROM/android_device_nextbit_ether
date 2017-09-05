@@ -1,16 +1,12 @@
 # Media
 PRODUCT_PACKAGES += \
-    libstagefrighthw \
     libc2dcolorconvert \
-    libdivxdrmdecrypt \
-    libOmxAacEnc \
-    libOmxAmrEnc \
+    libstagefrighthw \
     libOmxCore \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc \
+    libmm-omxcore \
     libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw
+    libOmxVdecHevc \
+    libOmxVenc
 
 PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true \
