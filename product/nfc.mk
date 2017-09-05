@@ -1,7 +1,8 @@
 # NFC packages
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl \
     com.android.nfc_extras \
-    nfc_nci.pn54x.default \
+    nfc_nci.msm8992c \
     NfcNci \
     Tag
 
