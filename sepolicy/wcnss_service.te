@@ -1,2 +1,0 @@
-allow wcnss_service self:capability { dac_override setgid setuid };
-allow wcnss_service diag_device:chr_file { read write };
