@@ -34,6 +34,10 @@ on early-init
     insmod /sbin/qcrypto_module.ko
     insmod /sbin/qdrbg_module.ko
 
+on fs
+    wait /dev/block/platform/soc.0/f9824900.sdhci
+    symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
+
 on init
     start qfintverify
     # Set permissions for persist partition
