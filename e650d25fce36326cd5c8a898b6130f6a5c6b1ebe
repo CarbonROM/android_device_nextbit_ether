@@ -1,0 +1,4 @@
+{
+  "pushCert": "certificate version 0.1\npusher CBF54FB8 1506308373 -0400\npushee ssh://review.carbonrom.org:29418/CarbonROM/android_device_nextbit_ether\nnonce 1506308382-969549D523B45534C6929D4C3B306FCB73AEDF09\n\n0000000000000000000000000000000000000000 1dd7512c17e0bc068da6e0c17e6a6af4b4efbf9c refs/for/cr-6.0%topic\u003dether-oreo\n-----BEGIN PGP SIGNATURE-----\n\niQEzBAABCAAdFiEEes0mZaC+fYIfHOUlT7Va2cv1T7gFAlnIcRUACgkQT7Va2cv1\nT7gMaggAl/6SM6LQBLHtDIJTbO7iSap/we81q2k6L00E5NerEfYGr11zJi8FWIEZ\nXpdEKjfOzyY++y3OunH8lqD2js5M4mRibnTUISD4S7SPt+I5+DKQP16OUE3lXQ+Y\ncSMIu5VPsY+lkQ2sjoyXB3tzKHKBH+WbA2fnr2bysmIgdgp/NR5M2BrX41a3g/oD\nq7i+xSfF7MaBUc0J1IfkhxCg5ManAE7JPWcjSAzHHS+k/pFj32OMs0b0ar0Hs6E3\nfw1cnajBxHc46FIZyUeIOYgQewOziggjGDswCHPqtAtx9SXhML1JGWqMaN4VpVD6\nN7Z9bFlHeLmfR/RBE+se0GSpJfRtZA\u003d\u003d\n\u003dQ0Kp\n-----END PGP SIGNATURE-----\n",
+  "comments": []
+}
